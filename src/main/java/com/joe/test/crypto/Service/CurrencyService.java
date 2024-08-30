@@ -35,8 +35,6 @@ public class CurrencyService {
     {
         var date = LocalDate.parse(dateStr);
 
-        System.out.println(date);
-
         var currencyCollections = repo.getCurrencies()
                 .stream()
                 .map(currency -> new Currency (currency.getCurrencyType(), currency.getDailyPrices().stream().filter(dp -> dp.isSameDate(date)).toList()))

@@ -29,7 +29,6 @@ public class ApiControllers {
     @GetMapping(value = "/highestnormalisedbydate/{date}")
     public Currency getHighestNormalisedByDate (@PathVariable String date)
     {
-//        System.out.println("request arrived "+date);
         return currencyService.getHighestNormalisedByDate(date);
     }
 
